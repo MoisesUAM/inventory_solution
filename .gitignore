@@ -3,25 +3,42 @@
 RemoteSystemsTempFiles/
 .recommenders/
 
-# Archivos de compilación
-bin/
-target/
-*.class
+# --- IDEs & Editors ---
 
-# Archivos de configuración de servidor (Jakarta EE)
-Servers/
-.settings/org.eclipse.wst.server.core.prefs
-
-# Archivos específicos de usuario
-.lock
-.loadpath
-
-# Archivos de configuración de proyecto Eclipse (en cualquier subcarpeta)
+# Eclipse
 **/.project
 **/.classpath
 **/.settings/
+**/bin/
+**/RemoteSystemsTempFiles/
+**/.recommenders/
 
-# Archivos específicos de IntelliJ o VS Code (por si acaso)
-**/.idea/
+# NetBeans
+**/nbproject/private/
+**/nbbuild/
+**/dist/
+**/nb-configuration.xml
+**/nbactions.xml
+
+# VS Code / Trae / Cursor / Gravity
 **/.vscode/
+**/.cursor/
+**/.trae/
+**/.history/
+
+# IntelliJ / Android Studio
+**/.idea/
 *.iml
+*.iws
+*.ipr
+
+# --- Build Tools & Output ---
+**/target/
+**/build/
+**/out/
+*.class
+*.log
+
+# --- OS Specific ---
+.DS_Store
+Thumbs.db
