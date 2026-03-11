@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.inventory</groupId>
+    <artifactId>inventory-solution</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>inventory_api</module>
+        <module>inventory_fx_frontend</module>
+        <module>inventory_web_frontend</module>
+        <module>inventory-commons</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.release>21</maven.compiler.release>
+        <jakarta.ee.version>11.0.0</jakarta.ee.version>
+        <wildfly.version>31.0.0.Final</wildfly.version>
+        <javafx.version>21.0.6</javafx.version>
+        <krazo.version>3.0.1</krazo.version>
+        <thymeleaf.version>3.1.2.RELEASE</thymeleaf.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>jakarta.platform</groupId>
+                <artifactId>jakarta.jakartaee-api</artifactId>
+                <version>${jakarta.ee.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-controls</artifactId>
+                <version>${javafx.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-fxml</artifactId>
+                <version>${javafx.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.eclipse.krazo</groupId>
+                <artifactId>krazo-resteasy</artifactId>
+                <version>${krazo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.krazo.ext</groupId>
+                <artifactId>krazo-thymeleaf</artifactId>
+                <version>${krazo.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.13.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.wildfly.plugins</groupId>
+                    <artifactId>wildfly-maven-plugin</artifactId>
+                    <version>5.0.0.Final</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
