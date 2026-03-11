@@ -1,0 +1,17 @@
+# Eclipse metadata (LO MÁS IMPORTANTE)
+.metadata/
+RemoteSystemsTempFiles/
+.recommenders/
+
+# Archivos de compilación
+bin/
+target/
+*.class
+
+# Archivos de configuración de servidor (Jakarta EE)
+Servers/
+.settings/org.eclipse.wst.server.core.prefs
+
+# Archivos específicos de usuario
+.lock
+.loadpath
