@@ -15,3 +15,13 @@ Servers/
 # Archivos específicos de usuario
 .lock
 .loadpath
+
+# Archivos de configuración de proyecto Eclipse (en cualquier subcarpeta)
+**/.project
+**/.classpath
+**/.settings/
+
+# Archivos específicos de IntelliJ o VS Code (por si acaso)
+**/.idea/
+**/.vscode/
+*.iml
