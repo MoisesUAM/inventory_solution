@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.inventory</groupId>
+    <groupId>net.mcoto</groupId>
     <artifactId>inventory-solution</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -21,9 +21,11 @@
         <maven.compiler.release>21</maven.compiler.release>
         <jakarta.ee.version>11.0.0</jakarta.ee.version>
         <wildfly.version>31.0.0.Final</wildfly.version>
-        <javafx.version>21.0.6</javafx.version>
+        <javafx.version>24</javafx.version>
         <krazo.version>3.0.1</krazo.version>
         <thymeleaf.version>3.1.2.RELEASE</thymeleaf.version>
+		<jackson.version>2.18.2</jackson.version>
+		<lombok.version>1.18.44</lombok.version>
     </properties>
 
     <dependencyManagement>
@@ -34,7 +36,6 @@
                 <version>${jakarta.ee.version}</version>
                 <scope>provided</scope>
             </dependency>
-
             <dependency>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-controls</artifactId>
@@ -45,7 +46,11 @@
                 <artifactId>javafx-fxml</artifactId>
                 <version>${javafx.version}</version>
             </dependency>
-
+			<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-graphics</artifactId>
+			<version>${javafx.version}</version>
+		</dependency>
             <dependency>
                 <groupId>org.eclipse.krazo</groupId>
                 <artifactId>krazo-resteasy</artifactId>
@@ -56,6 +61,22 @@
                 <artifactId>krazo-thymeleaf</artifactId>
                 <version>${krazo.version}</version>
             </dependency>
+			<dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jdk8</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+		<dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
         </dependencies>
     </dependencyManagement>
 
