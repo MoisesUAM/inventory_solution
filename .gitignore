@@ -39,6 +39,9 @@ RemoteSystemsTempFiles/
 *.class
 *.log
 
+**/.factorypath
+
+
 # --- OS Specific ---
 .DS_Store
 Thumbs.db
